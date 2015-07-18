@@ -23,7 +23,7 @@
  
  ###文章链接
 
-#### [城觅,点击链接当前博客](http://www.jianshu.com/p/d5ea6c9d65fd)
+#### [城觅,点击链接当前博客](http://www.jianshu.com/p/8b0d694d1c69)
 #####如有任何问题都可以在博客下留言，我会逐一回复
 
 #### [点击链接gitHub](http://www.jianshu.com/p/d5ea6c9d65fd)
