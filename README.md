@@ -1,4 +1,6 @@
 # iOS高仿城觅项目（开发思路和代码）
+![抽屉](http://ww3.sinaimg.cn/mw690/0068uRu1gw1eu7gt6f9lpg307r0eakhq.gif)
+
 ![首页](http://ww2.sinaimg.cn/mw690/0068uRu1gw1eu74isba6cg307r0eaqv8.gif)
 
 ![发现](http://ww1.sinaimg.cn/mw690/0068uRu1gw1eu74iyka0ug307r0eau0x.gif)

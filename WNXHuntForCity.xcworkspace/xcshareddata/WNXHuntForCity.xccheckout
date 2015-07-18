@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>CE845C74-1AD7-4A04-91CA-B649C13B1CE6</string>
+	<key>IDESourceControlProjectName</key>
+	<string>WNXHuntForCity</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>7E9A4C5E8C9EACC0CB8D0A591461B22E0270FA95</key>
+		<string>https://github.com/ZhongTaoTian/WNXHuntForCity.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>WNXHuntForCity.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>7E9A4C5E8C9EACC0CB8D0A591461B22E0270FA95</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ZhongTaoTian/WNXHuntForCity.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>7E9A4C5E8C9EACC0CB8D0A591461B22E0270FA95</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7E9A4C5E8C9EACC0CB8D0A591461B22E0270FA95</string>
+			<key>IDESourceControlWCCName</key>
+			<string>WNXHuntForCity</string>
+		</dict>
+	</array>
+</dict>
+</plist>
