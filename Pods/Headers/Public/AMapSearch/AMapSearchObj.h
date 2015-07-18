@@ -1,0 +1,1 @@
+../../../AMapSearch/AMapSearchKit.framework/Versions/2.6.0.29103c6/Headers/AMapSearchObj.h

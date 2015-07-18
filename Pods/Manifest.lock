@@ -1,0 +1,27 @@
+PODS:
+  - AMap2DMap (2.6.0)
+  - AMapSearch (2.6.0)
+  - Masonry (0.6.2)
+  - MJExtension (2.5.2)
+  - MJRefresh (2.3.1)
+  - SDWebImage (3.7.3):
+    - SDWebImage/Core (= 3.7.3)
+  - SDWebImage/Core (3.7.3)
+
+DEPENDENCIES:
+  - AMap2DMap
+  - AMapSearch
+  - Masonry
+  - MJExtension
+  - MJRefresh
+  - SDWebImage
+
+SPEC CHECKSUMS:
+  AMap2DMap: b5ce82581ca53b71a0136da858f7ef04db1ffc59
+  AMapSearch: 0ea3101eec4b9f500b53e33dcda30d343d41613b
+  Masonry: 362e8a1cc0beada4a4c4832d5e863da2a51533be
+  MJExtension: 73e812aca0846e4a7b4d7aca34cfacf48d1f3310
+  MJRefresh: fa22d5d753aaceb4e76232ce264cb2dca90b323f
+  SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
+
+COCOAPODS: 0.37.2

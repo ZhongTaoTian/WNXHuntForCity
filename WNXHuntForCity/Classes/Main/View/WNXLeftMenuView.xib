@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="aZt-wd-YXT" customClass="WNXLeftMenuView">
+            <rect key="frame" x="0.0" y="0.0" width="370" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgImage" translatesAutoresizingMaskIntoConstraints="NO" id="efs-vf-4Pm">
+                    <rect key="frame" x="0.0" y="0.0" width="370" height="667"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blackLine" translatesAutoresizingMaskIntoConstraints="NO" id="7wI-vc-TEp">
+                    <rect key="frame" x="-6" y="239" width="362" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="22" id="4sn-kg-jZe"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cse-m7-AIe" userLabel="foundBtn" customClass="WNXMenuButton">
+                    <rect key="frame" x="57" y="159" width="254" height="70"/>
+                    <state key="normal" backgroundImage="found">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" backgroundImage="foundSelected"/>
+                    <connections>
+                        <action selector="sender:" destination="aZt-wd-YXT" eventType="touchDown" id="IBb-ct-rGD"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vSL-iB-MbG" userLabel="unLoginBtn" customClass="WNXMenuButton">
+                    <rect key="frame" x="57" y="275" width="304" height="70"/>
+                    <state key="normal" backgroundImage="unLogin">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="sender:" destination="aZt-wd-YXT" eventType="touchUpInside" id="wwZ-Nl-WTe"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Lq-sP-mLL" userLabel="sinaBtn" customClass="WNXMenuButton">
+                    <rect key="frame" x="57" y="355" width="254" height="70"/>
+                    <state key="normal" backgroundImage="sina">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" backgroundImage="homeSeletced"/>
+                    <state key="highlighted" backgroundImage="sinaH"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D01-Wt-wN9" userLabel="weixinBtn" customClass="WNXMenuButton">
+                    <rect key="frame" x="57" y="435" width="254" height="70"/>
+                    <state key="normal" backgroundImage="weixin">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" backgroundImage="homeSeletced"/>
+                    <state key="highlighted" backgroundImage="sinaH"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ztB-4C-D4f" userLabel="messageBtn" customClass="WNXMenuButton">
+                    <rect key="frame" x="57" y="537" width="254" height="70"/>
+                    <state key="normal" backgroundImage="message">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" backgroundImage="messageSelected"/>
+                    <connections>
+                        <action selector="sender:" destination="aZt-wd-YXT" eventType="touchDown" id="u8A-JJ-9g3"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blackLine" translatesAutoresizingMaskIntoConstraints="NO" id="cM0-qH-6lj" userLabel="blackLine1">
+                    <rect key="frame" x="-6" y="515" width="362" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="22" id="Dow-3J-WaC"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="njD-6a-gQC" userLabel="setingBtn" customClass="WNXMenuButton">
+                    <rect key="frame" x="57" y="607" width="254" height="70"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="254" id="SyY-Qh-z69"/>
+                        <constraint firstAttribute="height" constant="70" id="sTL-Z9-XUY"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="seting">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" backgroundImage="setingSelected"/>
+                    <connections>
+                        <action selector="sender:" destination="aZt-wd-YXT" eventType="touchDown" id="Smo-5C-ofR"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X0g-FS-GSl" userLabel="homeBtn" customClass="WNXMenuButton">
+                    <rect key="frame" x="57" y="79" width="254" height="70"/>
+                    <state key="normal" backgroundImage="home">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" backgroundImage="homeSeletced"/>
+                    <connections>
+                        <action selector="sender:" destination="aZt-wd-YXT" eventType="touchDown" id="YWU-dc-VvE"/>
+                    </connections>
+                </button>
+                <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hdq-mk-hzr" customClass="WNXCityButton">
+                    <rect key="frame" x="57" y="5" width="254" height="60"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="Button">
+                        <color key="titleColor" red="0.92549019607843142" green="0.33333333333333331" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.72104492899999995" green="1" blue="0.01171461593" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="ztB-4C-D4f" firstAttribute="height" secondItem="D01-Wt-wN9" secondAttribute="height" id="2Ir-xS-WMy"/>
+                <constraint firstItem="6Lq-sP-mLL" firstAttribute="bottom" secondItem="D01-Wt-wN9" secondAttribute="top" constant="-10" id="3FC-Is-Ga0"/>
+                <constraint firstItem="6Lq-sP-mLL" firstAttribute="height" secondItem="vSL-iB-MbG" secondAttribute="height" id="3d5-fs-UYr"/>
+                <constraint firstItem="X0g-FS-GSl" firstAttribute="height" secondItem="cse-m7-AIe" secondAttribute="height" id="5w5-ZM-7z1"/>
+                <constraint firstItem="njD-6a-gQC" firstAttribute="top" secondItem="ztB-4C-D4f" secondAttribute="bottom" id="7Cb-uo-0HV"/>
+                <constraint firstItem="cse-m7-AIe" firstAttribute="leading" secondItem="ztB-4C-D4f" secondAttribute="leading" id="7JP-7j-Gdu"/>
+                <constraint firstItem="ztB-4C-D4f" firstAttribute="width" secondItem="njD-6a-gQC" secondAttribute="width" id="7xf-Fu-h8V"/>
+                <constraint firstItem="6Lq-sP-mLL" firstAttribute="height" secondItem="D01-Wt-wN9" secondAttribute="height" id="7ye-wc-9zb"/>
+                <constraint firstAttribute="bottom" secondItem="njD-6a-gQC" secondAttribute="bottom" constant="-10" id="84i-0w-zp4"/>
+                <constraint firstItem="ztB-4C-D4f" firstAttribute="width" secondItem="D01-Wt-wN9" secondAttribute="width" id="BLI-rx-65i"/>
+                <constraint firstAttribute="trailing" secondItem="efs-vf-4Pm" secondAttribute="trailing" id="BT0-Fz-Vni"/>
+                <constraint firstItem="X0g-FS-GSl" firstAttribute="width" secondItem="cse-m7-AIe" secondAttribute="width" id="BoC-mI-YvA"/>
+                <constraint firstAttribute="trailing" secondItem="cM0-qH-6lj" secondAttribute="trailing" constant="14" id="CfE-oX-lDe"/>
+                <constraint firstItem="Hdq-mk-hzr" firstAttribute="top" secondItem="aZt-wd-YXT" secondAttribute="top" constant="5" id="EbW-Ut-Oji"/>
+                <constraint firstItem="Hdq-mk-hzr" firstAttribute="width" secondItem="6Lq-sP-mLL" secondAttribute="width" id="FmD-Fk-sgz"/>
+                <constraint firstAttribute="trailing" secondItem="7wI-vc-TEp" secondAttribute="trailing" constant="14" id="FqG-Md-v4K"/>
+                <constraint firstItem="vSL-iB-MbG" firstAttribute="top" secondItem="7wI-vc-TEp" secondAttribute="bottom" constant="14" id="G0c-ix-8IF"/>
+                <constraint firstItem="Hdq-mk-hzr" firstAttribute="leading" secondItem="6Lq-sP-mLL" secondAttribute="leading" id="KFT-1j-tcj"/>
+                <constraint firstItem="cse-m7-AIe" firstAttribute="bottom" secondItem="7wI-vc-TEp" secondAttribute="top" constant="-10" id="S2u-q6-0uY"/>
+                <constraint firstItem="vSL-iB-MbG" firstAttribute="width" secondItem="6Lq-sP-mLL" secondAttribute="width" constant="50" id="Tpk-Xo-q70"/>
+                <constraint firstItem="cM0-qH-6lj" firstAttribute="leading" secondItem="aZt-wd-YXT" secondAttribute="leading" constant="-6" id="X7p-aV-vsi"/>
+                <constraint firstItem="6Lq-sP-mLL" firstAttribute="leading" secondItem="D01-Wt-wN9" secondAttribute="leading" id="Y6d-cs-vQf"/>
+                <constraint firstItem="ztB-4C-D4f" firstAttribute="height" secondItem="njD-6a-gQC" secondAttribute="height" id="YRW-bL-Tj0"/>
+                <constraint firstAttribute="bottom" secondItem="efs-vf-4Pm" secondAttribute="bottom" id="c9q-E8-iB7"/>
+                <constraint firstItem="7wI-vc-TEp" firstAttribute="leading" secondItem="aZt-wd-YXT" secondAttribute="leading" constant="-6" id="dnx-MK-JT8"/>
+                <constraint firstItem="X0g-FS-GSl" firstAttribute="leading" secondItem="cse-m7-AIe" secondAttribute="leading" id="gE1-5I-S8W"/>
+                <constraint firstItem="ztB-4C-D4f" firstAttribute="width" secondItem="cse-m7-AIe" secondAttribute="width" id="hMy-Ku-YY5"/>
+                <constraint firstItem="vSL-iB-MbG" firstAttribute="leading" secondItem="6Lq-sP-mLL" secondAttribute="leading" id="i5d-hX-IxL"/>
+                <constraint firstItem="efs-vf-4Pm" firstAttribute="top" secondItem="aZt-wd-YXT" secondAttribute="top" id="kpQ-cI-JWG"/>
+                <constraint firstItem="efs-vf-4Pm" firstAttribute="leading" secondItem="aZt-wd-YXT" secondAttribute="leading" id="mxf-BR-X2X"/>
+                <constraint firstItem="ztB-4C-D4f" firstAttribute="leading" secondItem="D01-Wt-wN9" secondAttribute="leading" id="nRt-dy-gpX"/>
+                <constraint firstItem="ztB-4C-D4f" firstAttribute="top" secondItem="cM0-qH-6lj" secondAttribute="bottom" id="nvn-pD-eP7"/>
+                <constraint firstItem="Hdq-mk-hzr" firstAttribute="height" secondItem="6Lq-sP-mLL" secondAttribute="height" constant="-10" id="qMf-Y4-Mfe"/>
+                <constraint firstItem="X0g-FS-GSl" firstAttribute="bottom" secondItem="cse-m7-AIe" secondAttribute="top" constant="-10" id="qsQ-Uc-KQL"/>
+                <constraint firstItem="ztB-4C-D4f" firstAttribute="leading" secondItem="njD-6a-gQC" secondAttribute="leading" id="sna-gZ-7eF"/>
+                <constraint firstItem="vSL-iB-MbG" firstAttribute="bottom" secondItem="6Lq-sP-mLL" secondAttribute="top" constant="-10" id="t8k-vk-bsX"/>
+                <constraint firstItem="D01-Wt-wN9" firstAttribute="bottom" secondItem="cM0-qH-6lj" secondAttribute="top" constant="-10" id="u4Q-sI-qpY"/>
+                <constraint firstItem="ztB-4C-D4f" firstAttribute="height" secondItem="cse-m7-AIe" secondAttribute="height" id="uc8-W5-mhC"/>
+                <constraint firstItem="njD-6a-gQC" firstAttribute="leading" secondItem="aZt-wd-YXT" secondAttribute="leading" constant="57" id="vAJ-qx-H90"/>
+                <constraint firstItem="6Lq-sP-mLL" firstAttribute="width" secondItem="D01-Wt-wN9" secondAttribute="width" id="wrN-jy-d4X"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="btnHeightConstraint" destination="sTL-Z9-XUY" id="wum-Ra-YsA"/>
+                <outlet property="btnLeftConstraint" destination="vAJ-qx-H90" id="LYz-qw-8Xq"/>
+                <outlet property="btnWidthConstraint" destination="SyY-Qh-z69" id="4Cv-8R-fmT"/>
+                <outlet property="cityBtn" destination="Hdq-mk-hzr" id="jGD-5U-OxB"/>
+                <outlet property="foundBtn" destination="cse-m7-AIe" id="3So-qn-Uji"/>
+                <outlet property="homeBtn" destination="X0g-FS-GSl" id="t89-BT-gFy"/>
+                <outlet property="iconBtn" destination="vSL-iB-MbG" id="XqI-Ch-V96"/>
+                <outlet property="messageBtn" destination="ztB-4C-D4f" id="mp7-4F-tqN"/>
+                <outlet property="setingBtn" destination="njD-6a-gQC" id="8JA-eM-z6b"/>
+                <outlet property="sinaBtn" destination="6Lq-sP-mLL" id="acF-nT-rpK"/>
+                <outlet property="weixinBtn" destination="D01-Wt-wN9" id="Qj3-9r-Jrh"/>
+            </connections>
+            <point key="canvasLocation" x="-4" y="124.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bgImage" width="194" height="186"/>
+        <image name="blackLine" width="258" height="24"/>
+        <image name="found" width="185" height="54"/>
+        <image name="foundSelected" width="185" height="54"/>
+        <image name="home" width="185" height="54"/>
+        <image name="homeSeletced" width="185" height="54"/>
+        <image name="message" width="185" height="54"/>
+        <image name="messageSelected" width="185" height="54"/>
+        <image name="seting" width="185" height="54"/>
+        <image name="setingSelected" width="185" height="54"/>
+        <image name="sina" width="194" height="51"/>
+        <image name="sinaH" width="194" height="51"/>
+        <image name="unLogin" width="202" height="50"/>
+        <image name="weixin" width="194" height="51"/>
+    </resources>
+</document>

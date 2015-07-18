@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="WNXBeenAndCollectView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18W-f3-B4d" customClass="WNXMenuButton">
+                    <rect key="frame" x="0.0" y="0.0" width="187.5" height="45"/>
+                    <state key="normal" backgroundImage="collect">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XK6-ex-Yv6" customClass="WNXMenuButton">
+                    <rect key="frame" x="187" y="0.0" width="187.5" height="45"/>
+                    <state key="normal" backgroundImage="beenimage">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="18W-f3-B4d" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" multiplier="0.5" id="3Nt-H2-cdi"/>
+                <constraint firstItem="XK6-ex-Yv6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="5fr-Sn-VXb"/>
+                <constraint firstItem="XK6-ex-Yv6" firstAttribute="width" secondItem="18W-f3-B4d" secondAttribute="width" id="9d8-jg-eUT"/>
+                <constraint firstItem="18W-f3-B4d" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="FKu-GF-DBf"/>
+                <constraint firstItem="18W-f3-B4d" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="K02-88-oG8"/>
+                <constraint firstAttribute="trailing" secondItem="XK6-ex-Yv6" secondAttribute="trailing" id="XG1-zf-5Xf"/>
+                <constraint firstAttribute="bottom" secondItem="XK6-ex-Yv6" secondAttribute="bottom" id="lfV-qP-JsH"/>
+                <constraint firstItem="18W-f3-B4d" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="qmi-fG-YLp"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="beenButton" destination="18W-f3-B4d" id="UWw-zz-rrb"/>
+                <outlet property="collectButton" destination="XK6-ex-Yv6" id="dmF-IB-Xat"/>
+            </connections>
+            <point key="canvasLocation" x="279.5" y="303"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="beenimage" width="320" height="86"/>
+        <image name="collect" width="320" height="86"/>
+    </resources>
+</document>

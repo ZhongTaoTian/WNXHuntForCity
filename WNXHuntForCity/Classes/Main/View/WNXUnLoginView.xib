@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="WNXUnLoginView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unLogin-1" translatesAutoresizingMaskIntoConstraints="NO" id="YOT-uW-azh">
+                    <rect key="frame" x="167" y="10" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="Ip1-gl-MKv"/>
+                        <constraint firstAttribute="height" constant="40" id="meQ-Bs-adZ"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="未登录" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5DN-gQ-8O6">
+                    <rect key="frame" x="10" y="60" width="355" height="20.5"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6PX-vH-VNM">
+                    <rect key="frame" x="56" y="90.5" width="263" height="52"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="263" id="1jv-KM-Vmn"/>
+                        <constraint firstAttribute="height" constant="52" id="py5-od-HeL"/>
+                    </constraints>
+                    <state key="normal" image="button_login_sina">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted" image="button_login_sina_clicked"/>
+                    <connections>
+                        <action selector="sinaLoginBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="RhV-U9-SOm"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tuh-hh-ebl">
+                    <rect key="frame" x="56" y="162.5" width="263" height="52"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="263" id="6iH-jQ-L3p"/>
+                        <constraint firstAttribute="height" constant="52" id="aou-ch-wOF"/>
+                    </constraints>
+                    <state key="normal" image="button_login_wechat">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted" image="button_login_wechat_clicked"/>
+                    <connections>
+                        <action selector="WeixinLoginBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="gTb-EE-dbk"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="5DN-gQ-8O6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="0Wj-Kc-gdg"/>
+                <constraint firstItem="YOT-uW-azh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="5S7-Wa-fNR"/>
+                <constraint firstItem="tuh-hh-ebl" firstAttribute="top" secondItem="6PX-vH-VNM" secondAttribute="bottom" constant="20" id="DN2-TF-jS8"/>
+                <constraint firstAttribute="centerX" secondItem="6PX-vH-VNM" secondAttribute="centerX" id="HtK-as-iDb"/>
+                <constraint firstItem="5DN-gQ-8O6" firstAttribute="top" secondItem="YOT-uW-azh" secondAttribute="bottom" constant="10" id="NOX-iT-EjW"/>
+                <constraint firstItem="6PX-vH-VNM" firstAttribute="top" secondItem="5DN-gQ-8O6" secondAttribute="bottom" constant="10" id="W55-JI-rxW"/>
+                <constraint firstAttribute="centerX" secondItem="YOT-uW-azh" secondAttribute="centerX" id="aCb-8s-9aY"/>
+                <constraint firstAttribute="centerX" secondItem="tuh-hh-ebl" secondAttribute="centerX" id="nbV-EB-Tjr"/>
+                <constraint firstAttribute="trailing" secondItem="5DN-gQ-8O6" secondAttribute="trailing" constant="10" id="quU-zs-QWM"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="iconImageView" destination="YOT-uW-azh" id="mZP-2w-wwl"/>
+            </connections>
+            <point key="canvasLocation" x="345.5" y="-51.75"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="button_login_sina" width="448" height="88"/>
+        <image name="button_login_sina_clicked" width="448" height="88"/>
+        <image name="button_login_wechat" width="448" height="88"/>
+        <image name="button_login_wechat_clicked" width="448" height="88"/>
+        <image name="unLogin-1" width="68" height="68"/>
+    </resources>
+</document>

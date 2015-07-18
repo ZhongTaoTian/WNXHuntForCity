@@ -1,0 +1,53 @@
+//
+//  PrefixHeader.pch
+//  WNXHuntForCity
+//
+//  Created by MacBook on 15/6/29.
+//  Copyright (c) 2015年 维尼的小熊. All rights reserved.
+//
+#ifdef __OBJC__
+
+#define MAS_SHORTHAND
+#define MAS_SHORTHAND_GLOBALS
+#import "Masonry.h"
+
+#import "UIBarButtonItem+WNXBarButtonItem.h"
+#import "UIColor+WNXColor.h"
+
+//全局的绿色主题
+#define WNXColor(r, g, b) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:1]
+#define WNXGolbalGreen WNXColor(33, 197, 180)
+
+//抽屉顶部距离 底部一样
+#define WNXScaleTopMargin 35
+//app的高度
+#define WNXAppWidth ([UIScreen mainScreen].bounds.size.width)
+//app的宽度
+#define WNXAppHeight ([UIScreen mainScreen].bounds.size.height)
+//抽屉拉出来右边剩余比例
+#define WNXZoomScaleRight 0.14
+
+//推荐cell的高度
+#define WNXRnmdCellHeight 210.0
+//推荐headView的高度
+#define WNXRnmdHeadViewHeight 60.0
+//背景的灰色
+#define WNXBackgroundGrayColor WNXColor(51, 52, 53)
+//判断系统版本号是否是iOS8以上
+#define iOS8 [[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0
+
+
+#pragma clang diagnostic ignored "-W#warnings"
+
+
+#ifdef DEBUG
+
+#define WNXLog(...)  NSLog(__VA_ARGS__)
+
+#else
+
+#define WNXLog(...)
+
+#endif
+
+#endif

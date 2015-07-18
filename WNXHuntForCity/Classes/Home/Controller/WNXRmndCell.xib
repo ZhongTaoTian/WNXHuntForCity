@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="rmndCell" rowHeight="210" id="KGk-i7-Jjw" customClass="WNXRmndCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="220"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food" translatesAutoresizingMaskIntoConstraints="NO" id="Ped-qE-0Ya">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="210.5"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="五星级大酒店厨师转战烤肉界" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Yj-0o-TRN">
+                        <rect key="frame" x="10" y="148.5" width="260" height="24"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="index_navigation_nearby" translatesAutoresizingMaskIntoConstraints="NO" id="Haw-Mq-6jF">
+                        <rect key="frame" x="10" y="181" width="15" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="7hM-02-oIM"/>
+                            <constraint firstAttribute="width" constant="15" id="fhO-Ga-zs7"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="百汇美食生蚝" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p0j-OG-HGu">
+                        <rect key="frame" x="30" y="180" width="78" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="EiQ-6Y-3xR"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="112" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q0m-en-1U0">
+                        <rect key="frame" x="289" y="184" width="22.5" height="16"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="discoverNav_collectionHeart" translatesAutoresizingMaskIntoConstraints="NO" id="8Gt-pp-5I7">
+                        <rect key="frame" x="269" y="186" width="15" height="13"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="15" id="3MM-nK-yeC"/>
+                            <constraint firstAttribute="height" constant="13" id="k5E-lT-dhT"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="q0m-en-1U0" firstAttribute="leading" secondItem="8Gt-pp-5I7" secondAttribute="trailing" constant="5" id="Mh3-cN-ZhL"/>
+                    <constraint firstItem="Ped-qE-0Ya" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="P9k-gJ-OsX"/>
+                    <constraint firstAttribute="bottom" secondItem="q0m-en-1U0" secondAttribute="bottom" constant="19" id="Tz8-3l-Uvj"/>
+                    <constraint firstItem="Haw-Mq-6jF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="ZJK-8l-aiZ"/>
+                    <constraint firstAttribute="bottom" secondItem="p0j-OG-HGu" secondAttribute="bottom" constant="18.5" id="ad3-5e-BYR"/>
+                    <constraint firstItem="p0j-OG-HGu" firstAttribute="top" secondItem="1Yj-0o-TRN" secondAttribute="bottom" constant="7" id="c0h-M4-5nu"/>
+                    <constraint firstItem="8Gt-pp-5I7" firstAttribute="leading" secondItem="p0j-OG-HGu" secondAttribute="trailing" priority="10" constant="10" id="cd7-dK-vR7"/>
+                    <constraint firstAttribute="bottom" secondItem="Haw-Mq-6jF" secondAttribute="bottom" constant="18" id="d7b-En-JEg"/>
+                    <constraint firstAttribute="bottom" secondItem="Ped-qE-0Ya" secondAttribute="bottom" constant="9" id="dIY-ju-mQ6"/>
+                    <constraint firstItem="Ped-qE-0Ya" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="dTU-oG-XyW"/>
+                    <constraint firstItem="1Yj-0o-TRN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="jT2-Vs-P2G"/>
+                    <constraint firstAttribute="trailing" secondItem="q0m-en-1U0" secondAttribute="trailing" constant="8" id="qlV-yS-BXh"/>
+                    <constraint firstItem="p0j-OG-HGu" firstAttribute="leading" secondItem="Haw-Mq-6jF" secondAttribute="trailing" constant="5" id="s6l-rA-7U8"/>
+                    <constraint firstAttribute="bottom" secondItem="8Gt-pp-5I7" secondAttribute="bottom" constant="20.5" id="txI-G3-36m"/>
+                    <constraint firstAttribute="trailing" secondItem="Ped-qE-0Ya" secondAttribute="trailing" id="uEs-8Z-9iU"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="adressLabel" destination="p0j-OG-HGu" id="T9n-5j-HOs"/>
+                <outlet property="backImageView" destination="Ped-qE-0Ya" id="xiU-Lo-5f0"/>
+                <outlet property="nameLabel" destination="1Yj-0o-TRN" id="WSs-ou-Mca"/>
+                <outlet property="praiseLabel" destination="q0m-en-1U0" id="7nL-Ce-mrn"/>
+            </connections>
+            <point key="canvasLocation" x="214" y="390"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="discoverNav_collectionHeart" width="22" height="19"/>
+        <image name="food" width="720" height="284"/>
+        <image name="index_navigation_nearby" width="20" height="29"/>
+    </resources>
+</document>

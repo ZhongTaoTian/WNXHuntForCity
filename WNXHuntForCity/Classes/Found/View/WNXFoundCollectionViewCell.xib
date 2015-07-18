@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="iconCell" id="gTV-IL-0wX" customClass="WNXFoundCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="135"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="135"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWV-Qh-wIo">
+                        <rect key="frame" x="15" y="0.0" width="70" height="70"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="m88-Bf-MQc"/>
+                            <constraint firstAttribute="height" constant="70" id="qSa-IX-5ik"/>
+                        </constraints>
+                        <state key="normal" image="selectView_food">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="逛街212133" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AiU-B8-5wR">
+                        <rect key="frame" x="0.0" y="87" width="100" height="21.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="54" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HfZ-Zc-x6g">
+                        <rect key="frame" x="0.0" y="112" width="100" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="AiU-B8-5wR" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="AmP-LI-B3E"/>
+                <constraint firstItem="HfZ-Zc-x6g" firstAttribute="top" secondItem="AiU-B8-5wR" secondAttribute="bottom" constant="3.5" id="BZu-dj-rQH"/>
+                <constraint firstAttribute="centerX" secondItem="zWV-Qh-wIo" secondAttribute="centerX" id="Crj-lr-SoI"/>
+                <constraint firstItem="zWV-Qh-wIo" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Kja-ZR-bYR"/>
+                <constraint firstAttribute="centerX" secondItem="AiU-B8-5wR" secondAttribute="centerX" id="Oqu-Zd-2ay"/>
+                <constraint firstItem="HfZ-Zc-x6g" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="gR0-VY-JAL"/>
+                <constraint firstItem="AiU-B8-5wR" firstAttribute="top" secondItem="zWV-Qh-wIo" secondAttribute="bottom" constant="17.5" id="r6a-lu-cQl"/>
+                <constraint firstAttribute="trailing" secondItem="AiU-B8-5wR" secondAttribute="trailing" id="ykJ-7B-mF4"/>
+                <constraint firstAttribute="trailing" secondItem="HfZ-Zc-x6g" secondAttribute="trailing" id="zze-59-64Q"/>
+            </constraints>
+            <connections>
+                <outlet property="iconButton" destination="zWV-Qh-wIo" id="dzE-Yz-c2J"/>
+                <outlet property="subTitleLabel" destination="HfZ-Zc-x6g" id="zn2-gQ-uqU"/>
+                <outlet property="titleLabel" destination="AiU-B8-5wR" id="NOA-9N-ucC"/>
+            </connections>
+            <point key="canvasLocation" x="247" y="280.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="selectView_food" width="132" height="132"/>
+    </resources>
+</document>

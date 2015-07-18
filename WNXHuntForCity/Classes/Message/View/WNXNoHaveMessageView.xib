@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="WNXNoHaveMessageView">
+            <rect key="frame" x="0.0" y="0.0" width="160" height="150"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="discoverlist_getNilData" translatesAutoresizingMaskIntoConstraints="NO" id="1wd-uE-Vo7">
+                    <rect key="frame" x="40" y="10" width="80" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="80c-dF-c0D"/>
+                        <constraint firstAttribute="height" constant="80" id="c75-w8-ite"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="没有消息哦!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfj-db-0af">
+                    <rect key="frame" x="10" y="110" width="140" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="1wd-uE-Vo7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="Cxz-Sv-TAv"/>
+                <constraint firstAttribute="centerX" secondItem="1wd-uE-Vo7" secondAttribute="centerX" id="D8R-DR-Ri5"/>
+                <constraint firstItem="lfj-db-0af" firstAttribute="top" secondItem="1wd-uE-Vo7" secondAttribute="bottom" constant="20" id="c5f-75-Ocw"/>
+                <constraint firstAttribute="trailing" secondItem="lfj-db-0af" secondAttribute="trailing" constant="10" id="nDu-wC-6XD"/>
+                <constraint firstItem="lfj-db-0af" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="qMy-Nz-bdC"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="275" y="-19"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="discoverlist_getNilData" width="76" height="76"/>
+    </resources>
+</document>

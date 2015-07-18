@@ -1,0 +1,41 @@
+{
+  "images" : [
+    {
+      "resizing" : {
+        "mode" : "9-part",
+        "center" : {
+          "mode" : "stretch",
+          "width" : 1,
+          "height" : 1
+        },
+        "capInsets" : {
+          "bottom" : 2,
+          "top" : 2,
+          "right" : 2,
+          "left" : 2
+        }
+      },
+      "idiom" : "universal",
+      "filename" : "ViewLoadingAlert.png",
+      "alignment-insets" : {
+        "top" : 15,
+        "left" : 15,
+        "bottom" : 15,
+        "right" : 15
+      },
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}

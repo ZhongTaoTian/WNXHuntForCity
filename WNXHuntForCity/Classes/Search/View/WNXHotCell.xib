@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="WNXHotCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SVV-ap-Adc">
+                        <rect key="frame" x="20" y="8" width="72" height="34"/>
+                        <color key="backgroundColor" red="0.755365837320225" green="1" blue="0.87970689096363552" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="34" id="37t-Jq-9kb"/>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="100" id="7JP-ly-lDH"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="uyC-gt-UcI"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <inset key="contentEdgeInsets" minX="12" minY="0.0" maxX="12" maxY="0.0"/>
+                        <state key="normal" title="大飒飒">
+                            <color key="titleColor" red="0.27693814453719706" green="0.60544902146464641" blue="0.50643887978706392" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQh-p4-EWs">
+                        <rect key="frame" x="97" y="8" width="56" height="34"/>
+                        <color key="backgroundColor" red="0.21790269070000001" green="1" blue="0.84396614390000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="100" id="Ozw-4P-hPh"/>
+                            <constraint firstAttribute="height" constant="34" id="vhA-Qx-axy"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="zSp-bn-vSJ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <inset key="contentEdgeInsets" minX="12" minY="0.0" maxX="12" maxY="0.0"/>
+                        <state key="normal" title="大飒">
+                            <color key="titleColor" red="0.27693814449999998" green="0.60544902150000002" blue="0.50643887980000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpB-SJ-cn8">
+                        <rect key="frame" x="244" y="8" width="56" height="34"/>
+                        <color key="backgroundColor" red="0.21790269070000001" green="1" blue="0.84396614390000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="QLD-b5-OCC"/>
+                            <constraint firstAttribute="height" constant="34" id="SlP-Ks-4LQ"/>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="100" id="WK2-Kv-B3W"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <inset key="contentEdgeInsets" minX="12" minY="0.0" maxX="12" maxY="0.0"/>
+                        <state key="normal" title="大飒">
+                            <color key="titleColor" red="0.27693814449999998" green="0.60544902150000002" blue="0.50643887980000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MBg-Sj-vGg">
+                        <rect key="frame" x="183" y="8" width="56" height="34"/>
+                        <color key="backgroundColor" red="0.21790269070000001" green="1" blue="0.84396614390000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="100" id="2UA-1B-eDI"/>
+                            <constraint firstAttribute="height" constant="34" id="OxC-0a-RKh"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="kK2-FS-ZH6"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <inset key="contentEdgeInsets" minX="12" minY="0.0" maxX="12" maxY="0.0"/>
+                        <state key="normal" title="大飒">
+                            <color key="titleColor" red="0.27693814449999998" green="0.60544902150000002" blue="0.50643887980000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="gpB-SJ-cn8" firstAttribute="leading" secondItem="MBg-Sj-vGg" secondAttribute="trailing" priority="10" constant="5" id="AQE-JW-4fc"/>
+                    <constraint firstAttribute="centerY" secondItem="MBg-Sj-vGg" secondAttribute="centerY" id="T65-7X-6cx"/>
+                    <constraint firstAttribute="centerY" secondItem="gpB-SJ-cn8" secondAttribute="centerY" id="XAt-Cp-J1u"/>
+                    <constraint firstAttribute="centerY" secondItem="yQh-p4-EWs" secondAttribute="centerY" id="d6O-TK-ggC"/>
+                    <constraint firstItem="yQh-p4-EWs" firstAttribute="leading" secondItem="SVV-ap-Adc" secondAttribute="trailing" priority="10" constant="5" id="lZD-N7-YDV"/>
+                    <constraint firstAttribute="trailing" secondItem="gpB-SJ-cn8" secondAttribute="trailing" constant="20" id="ljj-b4-HE1"/>
+                    <constraint firstAttribute="centerY" secondItem="SVV-ap-Adc" secondAttribute="centerY" id="pmR-kx-TQH"/>
+                    <constraint firstItem="SVV-ap-Adc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="rMN-IF-rTE"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="hotButton1" destination="SVV-ap-Adc" id="Hvt-Ys-JW9"/>
+                <outlet property="hotButton2" destination="yQh-p4-EWs" id="09T-7Y-fp5"/>
+                <outlet property="hotButton3" destination="MBg-Sj-vGg" id="csq-ay-rNh"/>
+                <outlet property="hotButton4" destination="gpB-SJ-cn8" id="egH-rq-17C"/>
+            </connections>
+            <point key="canvasLocation" x="70" y="237"/>
+        </tableViewCell>
+    </objects>
+</document>
