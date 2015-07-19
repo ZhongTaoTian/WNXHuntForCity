@@ -18,7 +18,7 @@
     [super viewDidLoad];
 
     //清空interactivePopGestureRecognizer的delegate可以恢复因替换导航条的back按钮失去系统默认手势
-    //self.interactivePopGestureRecognizer.delegate = nil;
+    self.interactivePopGestureRecognizer.delegate = nil;
 
     //禁止手势冲突
     self.interactivePopGestureRecognizer.enabled = NO;

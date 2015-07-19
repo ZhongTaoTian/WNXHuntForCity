@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		61C4AA17C69D1DB974D5C2FD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 946854A4AA1281519DDC3B5F /* libPods.a */; };
 		FA042C2A1B405B9C00E89A2C /* WNXLeftMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA042C291B405B9C00E89A2C /* WNXLeftMenuView.xib */; };
+		FA0D92B91B5BCEC4005B196F /* WNXInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0D92B71B5BCEC4005B196F /* WNXInfoCell.m */; };
+		FA0D92BA1B5BCEC4005B196F /* WNXInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA0D92B81B5BCEC4005B196F /* WNXInfoCell.xib */; };
+		FA0D92BD1B5BD9D1005B196F /* WNXInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0D92BC1B5BD9D1005B196F /* WNXInfoModel.m */; };
+		FA0D92BF1B5BF170005B196F /* infoDatas.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA0D92BE1B5BF170005B196F /* infoDatas.plist */; };
 		FA188F591B46969800F4E86B /* WNXDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA188F571B46969800F4E86B /* WNXDetailViewController.m */; };
 		FA188F5D1B46A72100F4E86B /* WNXScrollHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA188F5C1B46A72100F4E86B /* WNXScrollHeadView.m */; };
 		FA6B3CA41B4176350064BB21 /* WNXHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6B3CA31B4176350064BB21 /* WNXHomeViewController.m */; };
@@ -115,6 +119,12 @@
 		946854A4AA1281519DDC3B5F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA042C241B40570500E89A2C /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		FA042C291B405B9C00E89A2C /* WNXLeftMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WNXLeftMenuView.xib; sourceTree = "<group>"; };
+		FA0D92B61B5BCEC4005B196F /* WNXInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNXInfoCell.h; sourceTree = "<group>"; };
+		FA0D92B71B5BCEC4005B196F /* WNXInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNXInfoCell.m; sourceTree = "<group>"; };
+		FA0D92B81B5BCEC4005B196F /* WNXInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WNXInfoCell.xib; sourceTree = "<group>"; };
+		FA0D92BB1B5BD9D1005B196F /* WNXInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNXInfoModel.h; sourceTree = "<group>"; };
+		FA0D92BC1B5BD9D1005B196F /* WNXInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNXInfoModel.m; sourceTree = "<group>"; };
+		FA0D92BE1B5BF170005B196F /* infoDatas.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = infoDatas.plist; sourceTree = "<group>"; };
 		FA188F561B46969800F4E86B /* WNXDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNXDetailViewController.h; sourceTree = "<group>"; };
 		FA188F571B46969800F4E86B /* WNXDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNXDetailViewController.m; sourceTree = "<group>"; };
 		FA188F5B1B46A72100F4E86B /* WNXScrollHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNXScrollHeadView.h; sourceTree = "<group>"; };
@@ -337,6 +347,8 @@
 				FAECF2DD1B4E8773006A5768 /* WNXArticleModel.m */,
 				FAB290A31B513717009E29CA /* WNXRmdCellModel.h */,
 				FAB290A41B513717009E29CA /* WNXRmdCellModel.m */,
+				FA0D92BB1B5BD9D1005B196F /* WNXInfoModel.h */,
+				FA0D92BC1B5BD9D1005B196F /* WNXInfoModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -368,6 +380,9 @@
 				FA713F651B56B17500488FFF /* WNXUserInfoView.h */,
 				FA713F661B56B17500488FFF /* WNXUserInfoView.m */,
 				FA713F681B56B18100488FFF /* WNXUserInfoView.xib */,
+				FA0D92B61B5BCEC4005B196F /* WNXInfoCell.h */,
+				FA0D92B71B5BCEC4005B196F /* WNXInfoCell.m */,
+				FA0D92B81B5BCEC4005B196F /* WNXInfoCell.xib */,
 				FA713F6A1B56B73500488FFF /* gender */,
 			);
 			path = View;
@@ -676,10 +691,10 @@
 			children = (
 				FA7F60B11B44D14E00C72452 /* WNXRmndCell.h */,
 				FA7F60B21B44D14E00C72452 /* WNXRmndCell.m */,
+				FA7F60B31B44D14E00C72452 /* WNXRmndCell.xib */,
 				FA7F60B61B44E3CA00C72452 /* WNXRmndHeadView.h */,
 				FA7F60B71B44E3CA00C72452 /* WNXRmndHeadView.m */,
 				FA7F60B91B44E3E000C72452 /* WNXRmndHeadView.xib */,
-				FA7F60B31B44D14E00C72452 /* WNXRmndCell.xib */,
 				FA7F60C41B457CFD00C72452 /* WNXDoubleTextView.h */,
 				FA7F60C51B457CFD00C72452 /* WNXDoubleTextView.m */,
 				FA6C95071B4A998700767983 /* WNXCustomNaviView.h */,
@@ -883,6 +898,7 @@
 				FAC59CFF1B4BB5B80035A5FC /* foundData.plist */,
 				FA9872711B5A393C00B51F1B /* blurData.plist */,
 				FA9F6B591B55011700DEF798 /* MessageData.plist */,
+				FA0D92BE1B5BF170005B196F /* infoDatas.plist */,
 			);
 			path = CustomPlist;
 			sourceTree = "<group>";
@@ -987,8 +1003,10 @@
 				FAAAB1481B400E9B004D7C61 /* LaunchScreen.xib in Resources */,
 				FAAAB1451B400E9B004D7C61 /* Images.xcassets in Resources */,
 				FAB290B41B5172DC009E29CA /* WNXBeenAndCollectView.xib in Resources */,
+				FA0D92BA1B5BCEC4005B196F /* WNXInfoCell.xib in Resources */,
 				FA9F6B681B55820700DEF798 /* WNXUnLoginView.xib in Resources */,
 				FAB290AF1B5143A2009E29CA /* WNXDetailFootView.xib in Resources */,
+				FA0D92BF1B5BF170005B196F /* infoDatas.plist in Resources */,
 				FA7F60B51B44D14E00C72452 /* WNXRmndCell.xib in Resources */,
 				FAB290A21B50EE69009E29CA /* WNXRmdTextCell.xib in Resources */,
 				FA042C2A1B405B9C00E89A2C /* WNXLeftMenuView.xib in Resources */,
@@ -1053,6 +1071,7 @@
 				FA9F6B661B5581D800DEF798 /* WNXUnLoginView.m in Sources */,
 				FAAAB18A1B4043BD004D7C61 /* WNXLeftMenuView.m in Sources */,
 				FA6C95511B4B034500767983 /* WNXHeadCollectionReusableView.m in Sources */,
+				FA0D92BD1B5BD9D1005B196F /* WNXInfoModel.m in Sources */,
 				FA9F6B551B54D54E00DEF798 /* WNXMessageCell.m in Sources */,
 				FAAAB1821B401786004D7C61 /* AppDelegate.m in Sources */,
 				FA7F60BD1B451A7000C72452 /* WNXShowViewController.m in Sources */,
@@ -1094,6 +1113,7 @@
 				FAAAB18D1B404408004D7C61 /* WNXMainViewController.m in Sources */,
 				FA7F60CE1B459DB600C72452 /* WNXSearchViewController.m in Sources */,
 				FA9F6B511B54419900DEF798 /* WNXMessageModel.m in Sources */,
+				FA0D92B91B5BCEC4005B196F /* WNXInfoCell.m in Sources */,
 				FA98726B1B58F76000B51F1B /* WNXHotButton.m in Sources */,
 				FA7335F81B42E53A00567F98 /* WNXCityButton.m in Sources */,
 				FA6B3CA41B4176350064BB21 /* WNXHomeViewController.m in Sources */,

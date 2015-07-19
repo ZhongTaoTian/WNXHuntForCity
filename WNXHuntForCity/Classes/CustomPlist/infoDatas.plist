@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>国家博物馆</string>
+		<key>subTitle</key>
+		<string>东长安街16号天安门广场东侧</string>
+		<key>isShowImage</key>
+		<string>1</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>010-65119031</string>
+		<key>subTitle</key>
+		<string>010-65116400</string>
+		<key>isShowImage</key>
+		<string>1</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>周二至周日上午9：00至下17：00（15：30停止售票、16：00停止入场、16：30广播清场）</string>
+		<key>isShowImage</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>迪士尼特展时间：2015.6.30 - 2015.8.18\n9:00-17:00 （15:30停止放票，16:00停止入馆。周一闭馆</string>
+		<key>isShowImage</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>迪士尼特展门票：50元\n1.3米以下儿童免费</string>
+		<key>isShowImage</key>
+		<string>0</string>
+	</dict>
+</array>
+</plist>

@@ -34,7 +34,6 @@
     
     //添加用户详情view到scrollView上
     self.userInfoView = [WNXUserInfoView userInfoView];
-    WNXLog(@"%@", NSStringFromCGRect(self.userInfoView.frame));
     [self.scrollView addSubview:self.userInfoView];
     
     //设置scrollView的内容大小

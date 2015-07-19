@@ -27,14 +27,20 @@
 #import "WNXBeenAndCollectView.h"
 #import "WNXUnLoginView.h"
 #import "WNXUserInfoDetailViewController.h"
+#import <MAMapKit/MAMapKit.h>
+#import "WNXMapViewController.h"
+#import "WNXInfoCell.h"
+#import "WNXInfoModel.h"
 
 //顶部scrollHeadView 的高度,先给写死
 static const CGFloat ScrollHeadViewHeight = 200;
 //选择View的高度
 static const CGFloat SelectViewHeight = 45;
 
-@interface WNXDetailViewController () <UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate, WNXSelectViewDelegate, WNXDetailFootViewDelegate>
+@interface WNXDetailViewController () <UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate, WNXSelectViewDelegate, WNXDetailFootViewDelegate, MAMapViewDelegate>
 
+/** 地图view */
+@property (nonatomic, strong)  MAMapView *mapView;
 /** 记录scrollView上次偏移的Y距离 */
 @property (nonatomic, assign) CGFloat                    scrollY;
 /** 记录scrollView上次偏移X的距离 */
@@ -77,10 +83,31 @@ static const CGFloat SelectViewHeight = 45;
 @property (nonatomic, strong) NSMutableArray             *rmdDatas;
 /** 详情页的总数据 */
 @property (nonatomic, strong) WNXDetailModel             *details;
+/** 信息tableview的数据 */
+@property (nonatomic, strong) NSMutableArray *infoDatas;
 
 @end
 
 @implementation WNXDetailViewController
+
+- (NSArray *)infoDatas
+{
+    if (_infoDatas == nil) {
+        
+        _infoDatas = [NSMutableArray array];
+        
+        NSArray *arr = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"infoDatas" ofType:@"plist"]];
+        
+        for (NSDictionary *dict in arr) {
+            
+            WNXInfoModel *model = [WNXInfoModel infoModelWithDict:dict];
+            [_infoDatas addObject:model];
+            
+        }
+    }
+    
+    return _infoDatas;
+}
 
 - (WNXDetailModel *)details
 {
@@ -118,7 +145,7 @@ static const CGFloat SelectViewHeight = 45;
     
     //初始化导航条上的内容
     [self setUpNavigtionBar];
-
+    
 }
 
 
@@ -152,7 +179,7 @@ static const CGFloat SelectViewHeight = 45;
     self.rmdTableView.contentInset = UIEdgeInsetsMake(ScrollHeadViewHeight + SelectViewHeight, 0, 0, 0);
     //取消tableview的分割线
     self.rmdTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-
+    
     //添加底部footView
     self.footView = [WNXDetailFootView detailFootView];
     self.footView.delegate = self;
@@ -163,6 +190,7 @@ static const CGFloat SelectViewHeight = 45;
     self.infoTableView.contentInset = UIEdgeInsetsMake(ScrollHeadViewHeight + SelectViewHeight, 0, 0, 0);
     self.infoTableView.delegate = self;
     self.infoTableView.dataSource = self;
+    self.infoTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.backgroundScrollView addSubview:self.infoTableView];
     
     //初始化footView1
@@ -199,6 +227,45 @@ static const CGFloat SelectViewHeight = 45;
     CGFloat beenAndCollectViewH = 45;
     self.beenAndCollectView.frame = CGRectMake(0, WNXAppHeight - beenAndCollectViewH, WNXAppWidth, beenAndCollectViewH);
     [self.view addSubview:self.beenAndCollectView];
+    
+    //初始化地图
+    [MAMapServices sharedServices].apiKey = @"2e6b9f0a88b4a79366a13ce1ee9688b8";
+    self.mapView = [[MAMapView alloc] initWithFrame:CGRectMake(0, 0, WNXAppWidth, 220)];
+    self.mapView.delegate = self;
+    self.mapView.showsScale = NO;
+    self.mapView.showsCompass = NO;
+    self.mapView.showsUserLocation = YES;
+    self.mapView.logoCenter = CGPointMake(WNXAppWidth - self.mapView.logoSize.width + 5, 220 - self.mapView.logoSize.height);
+    _mapView.zoomEnabled = NO;
+    self.mapView.scrollEnabled = NO;
+    [self.mapView setCenterCoordinate:CLLocationCoordinate2DMake(39.906598, 116.400673) animated:YES];
+    self.mapView.delegate = self;
+    self.mapView.zoomLevel = 14;
+
+    //添加自定义图片
+    MAPointAnnotation *pointAnnotation = [[MAPointAnnotation alloc] init];
+    pointAnnotation.coordinate = CLLocationCoordinate2DMake(39.906598, 116.400673);
+    [_mapView addAnnotation:pointAnnotation];
+    self.infoTableView.tableHeaderView = self.mapView;
+}
+
+- (MAAnnotationView *)mapView:(MAMapView *)mapView viewForAnnotation:(id<MAAnnotation>)annotation
+{
+    if ([annotation isKindOfClass:[MAPointAnnotation class]])
+    {
+        static NSString *reuseIndetifier = @"annotationReuseIndetifier";
+        MAAnnotationView *annotationView = (MAAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:reuseIndetifier];
+        if (annotationView == nil)
+        {
+            annotationView = [[MAAnnotationView alloc] initWithAnnotation:annotation
+                                                          reuseIdentifier:reuseIndetifier];
+        }
+        annotationView.image = [UIImage imageNamed:@"map_activity"];
+        //设置中⼼心点偏移，使得标注底部中间点成为经纬度对应点
+        annotationView.centerOffset = CGPointMake(0, -18);
+        return annotationView;
+    }
+    return nil;
 }
 
 //初始化导航条上的内容
@@ -252,7 +319,7 @@ static const CGFloat SelectViewHeight = 45;
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     if (scrollView == self.rmdTableView || scrollView == self.infoTableView) {//说明是tableView在滚动
-
+        
         //记录当前展示的是那个tableView
         self.showingTableView = (UITableView *)scrollView;
         
@@ -310,21 +377,21 @@ static const CGFloat SelectViewHeight = 45;
         CGAffineTransform transform = CGAffineTransformMakeScale(scaleTopView, scaleTopView );
         CGFloat ty = (scaleTopView - 1) * ScrollHeadViewHeight;
         self.topView.transform = CGAffineTransformTranslate(transform, 0, -ty * 0.2);
-
+        
         //记录selectViewY轴的偏移量,这个是用来计算每次切换tableView，让新出来的tableView总是在头部用的，
         //现在脑子有点迷糊 算不出来了。。凌晨2.57分~
         CGFloat selectViewOffsetY = self.selectView.frame.origin.y - ScrollHeadViewHeight;
-
+        
         if (selectViewOffsetY != -ScrollHeadViewHeight && selectViewOffsetY <= 0) {
             
             if (scrollView == self.rmdTableView) {
-        
+                
                 self.infoTableView.contentOffset = CGPointMake(0, -245 - selectViewOffsetY);
-
+                
             } else {
-              
+                
                 self.rmdTableView.contentOffset = CGPointMake(0, -245 - selectViewOffsetY);
-            
+                
             }
         }
         
@@ -342,7 +409,7 @@ static const CGFloat SelectViewHeight = 45;
             } else {
                 
                 self.rmdTableView.contentOffset = CGPointMake(0, -245 - selectViewOffsetY);
-
+                
             }
         }
         
@@ -377,17 +444,19 @@ static const CGFloat SelectViewHeight = 45;
     //判断是哪一个tableView，最多会同时拥有3个tableView，这里就不写第三种情况了，3中建议其他俩个交给另外俩个控制器来管理
     if (tableView == self.rmdTableView) {
         //推荐tableView
-            WNXRmdCellModel *rmdCellModel = self.rmdDatas[indexPath.row];
-            NSString *ch = rmdCellModel.ch;
-            if (ch) {
-                return rmdCellModel.cellHeight;
-            } else {
-                return 348;
-            }
+        WNXRmdCellModel *rmdCellModel = self.rmdDatas[indexPath.row];
+        NSString *ch = rmdCellModel.ch;
+        if (ch) {
+            return rmdCellModel.cellHeight;
+        } else {
+            return 348;
+        }
         
     } else {
         //信息tableVIew
-        return 200;
+        WNXInfoModel *model = self.infoDatas[indexPath.row];
+
+        return model.cellHeight;
     }
 }
 
@@ -395,11 +464,11 @@ static const CGFloat SelectViewHeight = 45;
 {
     if (tableView == self.rmdTableView) {
         //推荐tableView
-
-       return self.rmdDatas.count;
+        
+        return self.rmdDatas.count;
     } else {
         //信息tableVIew
-        return 3;
+        return self.infoDatas.count;
     }
 }
 
@@ -415,11 +484,30 @@ static const CGFloat SelectViewHeight = 45;
             return [WNXRmdPicCell cellWithTabelView:tableView rmdPicModel:rmdCellModel];
         }
     }
-    WNXRmndCell *cell = [WNXRmndCell cellWithTableView:tableView];
+
+    WNXInfoCell *cell = [WNXInfoCell infoCellWithTableView:tableView];
+    cell.model = self.infoDatas[indexPath.row];
+    if (self.infoDatas.count - 1 == indexPath.row) {
+        cell.lineView.hidden = YES;
+    }
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (tableView == self.rmdTableView) {
+        return;
+    } else if (indexPath.row == 0) {
+        //地图
+        WNXMapViewController *mapVC = [[WNXMapViewController alloc] init];
+        [self.navigationController pushViewController:mapVC animated:YES];
 
+    } else if (indexPath.row == 1) {
+        //打电话
+    }
+}
+
+#pragma mark - 隐藏系统的导航条
 - (void)viewDidAppear:(BOOL)animated
 {
     //防止拖动一下就出现导航条的情况
@@ -431,7 +519,7 @@ static const CGFloat SelectViewHeight = 45;
 {
     //防止拖动一下就出现导航条的情况
     [super viewDidDisappear:animated];
-    self.navigationController.navigationBarHidden = YES;
+//    self.navigationController.navigationBarHidden = YES;
 }
 
 //返回上个控制器
@@ -484,7 +572,7 @@ static const CGFloat SelectViewHeight = 45;
         WNXUserInfoDetailViewController *useInfo = [[WNXUserInfoDetailViewController alloc] init];
         [self.navigationController pushViewController:useInfo animated:YES];
     } else {
-    
+        
     }
     
 }
@@ -498,6 +586,8 @@ static const CGFloat SelectViewHeight = 45;
 - (void)dealloc
 {
     WNXLog(@"Detail被销毁了");
+    [self.mapView clearDisk];
 }
+
 
 @end
