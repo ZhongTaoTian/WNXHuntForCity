@@ -51,7 +51,7 @@
     if (!self.titleSecondLabel.hidden) {
         model.cellHeight = CGRectGetMaxY(self.titleSecondLabel.frame) + 10;
     } else {
-        model.cellHeight = CGRectGetMaxY(self.titleOneLabel.frame);
+        model.cellHeight = CGRectGetMaxY(self.titleOneLabel.frame) + 10;
     }
 
 }
