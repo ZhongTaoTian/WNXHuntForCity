@@ -45,7 +45,6 @@
 		FA7F60C01B451D2C00C72452 /* WNXHeadPushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7F60BF1B451D2C00C72452 /* WNXHeadPushViewController.m */; };
 		FA7F60C61B457CFD00C72452 /* WNXDoubleTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7F60C51B457CFD00C72452 /* WNXDoubleTextView.m */; };
 		FA7F60CB1B4586A100C72452 /* UIColor+WNXColor.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7F60CA1B4586A100C72452 /* UIColor+WNXColor.m */; };
-		FA7F60CE1B459DB600C72452 /* WNXSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7F60CD1B459DB600C72452 /* WNXSearchViewController.m */; };
 		FA7F60D51B45A26600C72452 /* WNXSearchTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7F60D41B45A26600C72452 /* WNXSearchTextField.m */; };
 		FA860FEF1B4842140006F077 /* WNXSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA860FEE1B4842140006F077 /* WNXSelectView.m */; };
 		FA860FF21B4857E50006F077 /* WNXSelecButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FA860FF11B4857E50006F077 /* WNXSelecButton.m */; };
@@ -95,6 +94,7 @@
 		FAC37CA71B5D27390055B662 /* CellDatas.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAC37CA61B5D27390055B662 /* CellDatas.plist */; };
 		FAC37CB21B5D46AD0055B662 /* WNXHomeCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC37CAF1B5D46AD0055B662 /* WNXHomeCellModel.m */; };
 		FAC37CB31B5D46AD0055B662 /* WNXHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC37CB11B5D46AD0055B662 /* WNXHomeModel.m */; };
+		FAC37CB61B5D63590055B662 /* WNXSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC37CB51B5D63590055B662 /* WNXSearchViewController.m */; };
 		FAC59D001B4BB5B80035A5FC /* foundData.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAC59CFF1B4BB5B80035A5FC /* foundData.plist */; };
 		FAC59D031B4BB8D90035A5FC /* WNXFoundCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC59D021B4BB8D90035A5FC /* WNXFoundCellModel.m */; };
 		FAC59D061B4BCCD40035A5FC /* WNXConditionView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC59D051B4BCCD40035A5FC /* WNXConditionView.m */; };
@@ -186,8 +186,6 @@
 		FA7F60C51B457CFD00C72452 /* WNXDoubleTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNXDoubleTextView.m; sourceTree = "<group>"; };
 		FA7F60C91B4586A100C72452 /* UIColor+WNXColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+WNXColor.h"; sourceTree = "<group>"; };
 		FA7F60CA1B4586A100C72452 /* UIColor+WNXColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+WNXColor.m"; sourceTree = "<group>"; };
-		FA7F60CC1B459DB600C72452 /* WNXSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WNXSearchViewController.h; path = ../../Home/Controller/WNXSearchViewController.h; sourceTree = "<group>"; };
-		FA7F60CD1B459DB600C72452 /* WNXSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WNXSearchViewController.m; path = ../../Home/Controller/WNXSearchViewController.m; sourceTree = "<group>"; };
 		FA7F60D31B45A26600C72452 /* WNXSearchTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNXSearchTextField.h; sourceTree = "<group>"; };
 		FA7F60D41B45A26600C72452 /* WNXSearchTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNXSearchTextField.m; sourceTree = "<group>"; };
 		FA860FED1B4842140006F077 /* WNXSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNXSelectView.h; sourceTree = "<group>"; };
@@ -269,6 +267,8 @@
 		FAC37CAF1B5D46AD0055B662 /* WNXHomeCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNXHomeCellModel.m; sourceTree = "<group>"; };
 		FAC37CB01B5D46AD0055B662 /* WNXHomeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNXHomeModel.h; sourceTree = "<group>"; };
 		FAC37CB11B5D46AD0055B662 /* WNXHomeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNXHomeModel.m; sourceTree = "<group>"; };
+		FAC37CB41B5D63590055B662 /* WNXSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNXSearchViewController.h; sourceTree = "<group>"; };
+		FAC37CB51B5D63590055B662 /* WNXSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNXSearchViewController.m; sourceTree = "<group>"; };
 		FAC59CFF1B4BB5B80035A5FC /* foundData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = foundData.plist; sourceTree = "<group>"; };
 		FAC59D011B4BB8D90035A5FC /* WNXFoundCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNXFoundCellModel.h; sourceTree = "<group>"; };
 		FAC59D021B4BB8D90035A5FC /* WNXFoundCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNXFoundCellModel.m; sourceTree = "<group>"; };
@@ -425,8 +425,8 @@
 		FA7F60D01B45A1D500C72452 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				FA7F60CC1B459DB600C72452 /* WNXSearchViewController.h */,
-				FA7F60CD1B459DB600C72452 /* WNXSearchViewController.m */,
+				FAC37CB41B5D63590055B662 /* WNXSearchViewController.h */,
+				FAC37CB51B5D63590055B662 /* WNXSearchViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1100,6 +1100,7 @@
 				FA6B3CAE1B418EA10064BB21 /* UIBarButtonItem+WNXBarButtonItem.m in Sources */,
 				FAC37CB21B5D46AD0055B662 /* WNXHomeCellModel.m in Sources */,
 				FA7F1FF11B40F91700231265 /* WNXMenuButton.m in Sources */,
+				FAC37CB61B5D63590055B662 /* WNXSearchViewController.m in Sources */,
 				FA7F60D51B45A26600C72452 /* WNXSearchTextField.m in Sources */,
 				FAB290B71B517C02009E29CA /* WNXPromptView.m in Sources */,
 				FA9F6B451B540E8300DEF798 /* UIImage+Size.m in Sources */,
@@ -1120,7 +1121,6 @@
 				FAAAB1831B401786004D7C61 /* main.m in Sources */,
 				FA6C95091B4A998700767983 /* WNXCustomNaviView.m in Sources */,
 				FAAAB18D1B404408004D7C61 /* WNXMainViewController.m in Sources */,
-				FA7F60CE1B459DB600C72452 /* WNXSearchViewController.m in Sources */,
 				FA9F6B511B54419900DEF798 /* WNXMessageModel.m in Sources */,
 				FA0D92B91B5BCEC4005B196F /* WNXInfoCell.m in Sources */,
 				FA7335F81B42E53A00567F98 /* WNXCityButton.m in Sources */,
