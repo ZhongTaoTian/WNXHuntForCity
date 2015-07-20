@@ -28,7 +28,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     //初始化UI
     [self setUpUI];
     
@@ -36,6 +36,7 @@
     [self setHeadRefresh];
 }
 
+//懒加载数据
 - (NSMutableArray *)datas
 {
     if (_datas == nil) {
@@ -71,7 +72,7 @@
 - (void)loadNewData
 {
     //模拟1秒后刷新表格UI
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{        
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         // 拿到当前的下拉刷新控件，结束刷新状态
         [self.tableView.header endRefreshing];
     });
@@ -149,11 +150,11 @@
 #pragma mark - WNXConditionViewDelegate
 - (void)conditionView:(WNXConditionView *)view didButtonClickFrom:(WNXConditionButtonType)from to:(WNXConditionButtonType)to
 {
-//    //渲染当前的tableView的图片,并且模糊
+    //    //渲染当前的tableView的图片,并且模糊
     if (self.blurImageView == nil) {
         self.blurImageView = [WNXRenderBlurView renderBlurViewWithImage:[UIImage imageWithCaputureView:self.tableView]];
         self.blurImageView.delegate = self;
-
+        
         CGFloat blurY = self.view.bounds.size.height == WNXAppHeight ? 64 : 0;
         
         self.blurImageView.frame = CGRectMake(0, blurY, WNXAppWidth, WNXAppHeight - 64);
@@ -200,9 +201,11 @@
 //重新定义导航条的状态
 - (void)viewWillAppear:(BOOL)animated
 {
+    [super viewWillAppear:animated];
+    
     [self.navigationController setNavigationBarHidden:NO animated:YES];
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"recomend_btn_gone"] forBarMetrics:UIBarMetricsDefault];
-    [super viewWillAppear:animated];
+    
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView

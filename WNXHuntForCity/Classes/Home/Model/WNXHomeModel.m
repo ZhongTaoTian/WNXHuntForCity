@@ -14,7 +14,9 @@
 
 + (instancetype)homeModelWithDict:(NSDictionary *)dict
 {
+    //便利构造方法
     WNXHomeModel *home = [[WNXHomeModel alloc] init];
+    
     [home setKeyValues:dict];
     
     return home;

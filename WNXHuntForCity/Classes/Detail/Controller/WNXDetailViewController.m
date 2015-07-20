@@ -91,6 +91,7 @@ static const CGFloat SelectViewHeight = 45;
 
 @implementation WNXDetailViewController
 
+//懒加载数据
 - (NSArray *)infoDatas
 {
     if (_infoDatas == nil) {
@@ -520,7 +521,13 @@ static const CGFloat SelectViewHeight = 45;
 {
     //防止拖动一下就出现导航条的情况
     [super viewDidDisappear:animated];
-//    self.navigationController.navigationBarHidden = YES;
+    self.navigationController.navigationBarHidden = YES;
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    self.navigationController.navigationBarHidden = YES;
 }
 
 //返回上个控制器
