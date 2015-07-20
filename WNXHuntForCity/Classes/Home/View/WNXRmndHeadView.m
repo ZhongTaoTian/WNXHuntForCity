@@ -1,12 +1,14 @@
 //
 //  WNXRmndHeadView.m
 //  WNXHuntForCity
-//
+//  github:    https://github.com/ZhongTaoTian/WNXHuntForCity
+//  项目讲解博客:http://www.jianshu.com/p/8b0d694d1c69
 //  Created by MacBook on 15/7/2.
 //  Copyright (c) 2015年 维尼的小熊. All rights reserved.
 //  推荐tableView headView
 
 #import "WNXRmndHeadView.h"
+#import "UIColor+WNXColor.h"
 
 @interface WNXRmndHeadView ()
 
@@ -20,7 +22,7 @@
 
 @implementation WNXRmndHeadView
 
-+ (instancetype)headViewWith:(WNXHeadModel *)headModel
++ (instancetype)headViewWith:(WNXHomeModel *)headModel
 {
     WNXRmndHeadView *headView = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil].lastObject;
     
@@ -29,12 +31,12 @@
     return headView;
 }
 
-- (void)setHeadModel:(WNXHeadModel *)headModel
+- (void)setHeadModel:(WNXHomeModel *)headModel
 {
-    _headModel = headModel;
-    self.titleLabel.text = headModel.title;
-    self.subTitleLabel.text = headModel.subTitle;
-    self.backgroundColor = headModel.headColor;
+    _headMode = headModel;
+    self.titleLabel.text = headModel.tag_name;
+    self.subTitleLabel.text = headModel.section_count;
+    self.backgroundColor = [UIColor colorWithHexString:headModel.color alpha:1];
 }
 
 @end

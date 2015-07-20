@@ -1,7 +1,8 @@
 //
 //  WNXDetailViewController.m
 //  WNXHuntForCity
-//
+//  github:    https://github.com/ZhongTaoTian/WNXHuntForCity
+//  项目讲解博客:http://www.jianshu.com/p/8b0d694d1c69
 //  Created by MacBook on 15/7/3.
 //  Copyright (c) 2015年 维尼的小熊. All rights reserved.
 //  详情页控制器
@@ -11,7 +12,7 @@
  
  这里的tableView有三种情况 根据服务端返回的数据显示 1个 2个或者3个 因为没有数据 我就默认写2个了,全都教给一个控制器来管理的
  这个控制器里面的逻辑比较复杂，写的比较着急，封装的非常非常不好,应该一些空间单独封装在一起，直接传入偏移量做出相应的动画,这里示例了一个顶部scrollView的动画
- 后续在封装起来
+ 后续在封装起来 一定注意控件的层级关系
  */
 
 #import "WNXDetailViewController.h"

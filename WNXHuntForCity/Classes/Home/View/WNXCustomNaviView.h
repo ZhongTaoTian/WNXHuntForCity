@@ -7,7 +7,7 @@
 //  自定义导航条
 
 #import <UIKit/UIKit.h>
-#import "WNXHeadModel.h"
+#import "WNXHomeModel.h"
 
 @protocol WNXCustomNaviViewDelegate <NSObject>
 
@@ -19,7 +19,7 @@
 
 @interface WNXCustomNaviView : UIView
 
-@property (nonatomic, strong) WNXHeadModel *headModel;
+@property (nonatomic, strong) WNXHomeModel *headModel;
 
 @property (nonatomic, weak) id <WNXCustomNaviViewDelegate> delegate;
 

@@ -1,10 +1,11 @@
 //
 //  WNXSetingViewController.m
 //  WNXHuntForCity
-//
+//  github:    https://github.com/ZhongTaoTian/WNXHuntForCity
+//  项目讲解博客:http://www.jianshu.com/p/8b0d694d1c69
 //  Created by MacBook on 15/6/30.
 //  Copyright (c) 2015年 维尼的小熊. All rights reserved.
-//
+//  设置
 
 #import "WNXSetingViewController.h"
 #import "WNXSetingView.h"
@@ -24,7 +25,6 @@
 @property (nonatomic, strong) WNXSetingView *feedBackView;
 /** 五星好评 */
 @property (nonatomic, strong) WNXSetingView *judgeView;
-
 /** 退出登陆按钮 */
 @property (nonatomic, strong) WNXMenuButton *logoutButton;
 
@@ -107,14 +107,14 @@
         case WNXSetingViewTypeFeedback:
         {
             UIApplication *app = [UIApplication sharedApplication];
-            NSURL *itunesPath = [NSURL URLWithString:@"http://www.jianshu.com/users/5fe7513c7a57/latest_articles"];
+            NSURL *itunesPath = [NSURL URLWithString:@"http://www.jianshu.com/p/8b0d694d1c69"];
             [app openURL:itunesPath];
         }
             break;
         case WNXSetingViewTypeJudge:
         {
            UIApplication *app = [UIApplication sharedApplication];
-            NSURL *itunesPath = [NSURL URLWithString:@"http://www.jianshu.com/users/5fe7513c7a57/latest_articles"];
+            NSURL *itunesPath = [NSURL URLWithString:@"http://www.jianshu.com/p/8b0d694d1c69"];
             [app openURL:itunesPath];
         }
             break;

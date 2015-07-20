@@ -1,10 +1,11 @@
 //
 //  WNXBeenAndCollectView.m
 //  WNXHuntForCity
-//
+//  github:    https://github.com/ZhongTaoTian/WNXHuntForCity
+//  项目讲解博客:http://www.jianshu.com/p/8b0d694d1c69
 //  Created by MacBook on 15/7/11.
 //  Copyright (c) 2015年 维尼的小熊. All rights reserved.
-//  去过和收藏的view
+//  去过和收藏的view 需要判断用户是否登录,如果未登录弹出登录,否则才可以点击是否去过
 
 #import "WNXBeenAndCollectView.h"
 #import "WNXMenuButton.h"

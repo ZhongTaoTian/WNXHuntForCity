@@ -1,7 +1,8 @@
 //
 //  WNXCustomNaviView.m
 //  WNXHuntForCity
-//
+//  github:    https://github.com/ZhongTaoTian/WNXHuntForCity
+//  项目讲解博客:http://www.jianshu.com/p/8b0d694d1c69 
 //  Created by MacBook on 15/7/6.
 //  Copyright (c) 2015年 维尼的小熊. All rights reserved.
 //  自定义导航条
@@ -62,11 +63,11 @@
     self.titleview.frame = CGRectMake(titleX, h * 0.25, titleW, h * 0.8);
 }
 
-- (void)setHeadModel:(WNXHeadModel *)headModel
+- (void)setHeadModel:(WNXHomeModel *)headModel
 {
     _headModel = headModel;
-    self.backgroundColor = headModel.headColor;
-    [self.titleview setTitle:headModel.title subTitle:headModel.subTitle];
+    self.backgroundColor = [UIColor colorWithHexString:headModel.color alpha:1];
+    [self.titleview setTitle:headModel.tag_name subTitle:headModel.section_count];
 }
 
 #pragma mark - 通知代理

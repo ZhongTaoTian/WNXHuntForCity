@@ -1,7 +1,8 @@
 //
 //  WNXHomeViewController.m
 //  WNXHuntForCity
-//
+//  github:    https://github.com/ZhongTaoTian/WNXHuntForCity
+//  项目讲解博客:http://www.jianshu.com/p/8b0d694d1c69
 //  Created by MacBook on 15/6/29.
 //  Copyright (c) 2015年 维尼的小熊. All rights reserved.
 //  首页
@@ -11,19 +12,24 @@
 #import "WNXRmndCell.h"
 #import "WNXRmndHeadView.h"
 #import "WNXHeadPushViewController.h"
-#import "WNXHeadModel.h"
 #import "WNXDetailViewController.h"
+#import "WNXHomeCellModel.h"
+#import "WNXHomeModel.h"
 
 @interface WNXHomeViewController () <UITableViewDelegate, UITableViewDataSource>
 
 //** 导航titileView */
 @property (nonatomic, weak) UISegmentedControl *titleView;
-
 //推荐View
 @property (nonatomic, strong) UITableView *rmedView;
-
 //headModels，用来控制headView的属性
 @property (nonatomic, strong) NSMutableArray *headModels;
+
+/** home的模型 */
+@property (nonatomic, strong) NSMutableArray *datas;
+
+/** cell的模型 */
+@property (nonatomic, strong) NSMutableArray *cellDatas;
 
 @property (nonatomic, strong) UIImageView *nearImageView;
 
@@ -78,25 +84,21 @@
     [self.nearImageView setImage:[UIImage imageNamed:@"wnxBG"]];
 }
 
-//headModels的懒加载,数据都是我自己随便写的。。正常是网络请求返回json解析完给数组赋值,
-//封装网络请求工具,建立模型，字典转模型，面向模型开发
-- (NSMutableArray *)headModels
+- (NSMutableArray *)datas
 {
-    if (_headModels == nil) {
-        _headModels = [NSMutableArray array];
-        for (int i = 0; i < 3; i++) {
-            
-            NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:@"烧烤", @"title",
-                                  [UIColor randColor], @"headColor",
-                                  @"19个灰太狼烤喜洋洋", @"subTitle",
-                                  nil];
-            WNXHeadModel *model = [WNXHeadModel headModelWithDict:dict];
-            [_headModels addObject:model];
+    if (_datas == nil) {
+        _datas = [NSMutableArray array];
+        NSArray *tmpArr = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"HomeDatas" ofType:@"plist"]];
+        for (NSDictionary *dict in tmpArr) {
+            WNXHomeModel *homeModel = [WNXHomeModel homeModelWithDict:dict];
+            [_datas addObject:homeModel];
         }
     }
     
-    return _headModels;
+    return _datas;
 }
+
+
 
 #pragma mark - titleViewAction
 - (void)titleViewChange:(UISegmentedControl *)sender
@@ -115,12 +117,13 @@
 #pragma mark - TableViewDelegate和TableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    WNXHomeModel *model = self.datas[section];
+    return model.body.count;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 3;
+    return self.datas.count;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
@@ -132,7 +135,7 @@
     //        headView =  [WNXRmndHeadView headViewWith:headModel];
     //    }
     
-    WNXHeadModel *headModel = self.headModels[section];
+    WNXHomeModel *headModel = self.datas[section];
     WNXRmndHeadView *headView = [WNXRmndHeadView headViewWith:headModel];
     //给headView添加点击手势
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(headViewTap:)];
@@ -157,7 +160,9 @@
 //加载cell
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    WNXRmndCell *cell = [WNXRmndCell cellWithTableView:self.rmedView];
+    WNXHomeModel *homeModel = self.datas[indexPath.section];
+    WNXHomeCellModel *model = [WNXHomeCellModel cellModelWithDict:(NSDictionary *)(homeModel.body[indexPath.row])];
+    WNXRmndCell *cell = [WNXRmndCell cellWithTableView:self.rmedView model:model];
     
     return cell;
 }
@@ -168,7 +173,7 @@
 {
     WNXRmndHeadView *headView = (WNXRmndHeadView *)tap.view;
     WNXHeadPushViewController *headPushVC = [[WNXHeadPushViewController alloc] init];
-    headPushVC.headModel = headView.headModel;
+    headPushVC.headModel = headView.headMode;
     [self.navigationController pushViewController:headPushVC animated:YES];
 }
 

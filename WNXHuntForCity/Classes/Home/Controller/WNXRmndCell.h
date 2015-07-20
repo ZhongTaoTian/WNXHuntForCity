@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WNXHomeCellModel.h"
 
 @interface WNXRmndCell : UITableViewCell
 
-//@property (nonatomic, strong) WNXCellModel *cellModel;
+/** cell的模型 */
+@property (nonatomic, strong) WNXHomeCellModel *model;
 
-+ (instancetype)cellWithTableView:(UITableView *)tableView;
++ (instancetype)cellWithTableView:(UITableView *)tableView model:(WNXHomeCellModel *)model;
 
 @end

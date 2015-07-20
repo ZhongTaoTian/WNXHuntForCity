@@ -1,10 +1,11 @@
 //
 //  WNXMessageViewController.m
 //  WNXHuntForCity
-//
+//  github:    https://github.com/ZhongTaoTian/WNXHuntForCity
+//  项目讲解博客:http://www.jianshu.com/p/8b0d694d1c69
 //  Created by MacBook on 15/6/30.
 //  Copyright (c) 2015年 维尼的小熊. All rights reserved.
-//
+//  消息
 
 #import "WNXMessageViewController.h"
 #import "WNXMessageDeleteButton.h"
@@ -19,16 +20,12 @@
 static const CGFloat deleteBtnHeight = 50.0;
 
 @interface WNXMessageViewController () <UITableViewDataSource, UITableViewDelegate, WNXMessageCellDelete>
-
 /** 消息tabelView */
 @property (nonatomic, strong) UITableView *tableView;
-
 /** 右边的导航按钮 */
 @property (nonatomic, strong) UIButton *rightBtn;
-
 /** 底部的删除全部按钮 */
 @property (nonatomic, strong) WNXMessageDeleteButton *deleteAllBtn;
-
 @property (nonatomic, strong) NSMutableArray *datas;
 
 @end

@@ -7,14 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "WNXHeadModel.h"
+#import "WNXHomeModel.h"
 
 @interface WNXRmndHeadView : UIView
 
 //headView的模型，重写set方法
-@property (nonatomic, strong) WNXHeadModel *headModel;
-
+@property (nonatomic, strong) WNXHomeModel *headMode;
 //便利构造方法
-+ (instancetype)headViewWith:(WNXHeadModel *)headModel;
++ (instancetype)headViewWith:(WNXHomeModel *)headModel;
 
 @end

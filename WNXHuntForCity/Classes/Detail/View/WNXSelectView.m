@@ -1,7 +1,8 @@
 //
 //  WNXSelectView.m
 //  WNXHuntForCity
-//
+//  github:    https://github.com/ZhongTaoTian/WNXHuntForCity
+//  项目讲解博客:http://www.jianshu.com/p/8b0d694d1c69
 //  Created by MacBook on 15/7/5.
 //  Copyright (c) 2015年 维尼的小熊. All rights reserved.
 //  用来处理详情页选着哪一个tableView的View，有两种情况，如果服务器返回的数据中评论为空，就有3个tableView

@@ -1,10 +1,11 @@
 //
 //  WNXMapViewController.m
 //  WNXHuntForCity
-//
+//  github:    https://github.com/ZhongTaoTian/WNXHuntForCity
+//  项目讲解博客:http://www.jianshu.com/p/8b0d694d1c69
 //  Created by MacBook on 15/7/18.
 //  Copyright (c) 2015年 维尼的小熊. All rights reserved.
-//
+//  地图控制器,这里原生app做的很细致,好多图片都是在服务器获取,然后添加到地图图层
 
 #import "WNXMapViewController.h"
 #import <MAMapKit/MAMapKit.h>
@@ -30,7 +31,7 @@
     //重新定义导航条的状态
     [MAMapServices sharedServices].apiKey = @"2e6b9f0a88b4a79366a13ce1ee9688b8";
     
-    self.mapView = [[MAMapView alloc] initWithFrame:CGRectMake(0, 64, WNXAppWidth, WNXAppHeight)];
+    self.mapView = [[MAMapView alloc] initWithFrame:self.view.bounds];
     _mapView.delegate = self;
     self.mapView.showsScale = NO;
     self.mapView.showsCompass = NO;

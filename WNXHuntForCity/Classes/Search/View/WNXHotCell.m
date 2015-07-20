@@ -1,10 +1,11 @@
 //
 //  WNXHotCell.m
 //  WNXHuntForCity
-//
+//  github:    https://github.com/ZhongTaoTian/WNXHuntForCity
+//  项目讲解博客:http://www.jianshu.com/p/8b0d694d1c69
 //  Created by MacBook on 15/7/17.
 //  Copyright (c) 2015年 维尼的小熊. All rights reserved.
-//
+//  热门cell,这里的cell只有一行,服务器每次返回四个字符串,根据字符串的长度重新布局button的位置
 
 #import "WNXHotCell.h"
 

@@ -1,10 +1,11 @@
-//
 //  WNXShowViewController.m
 //  WNXHuntForCity
-//
+//  github:    https://github.com/ZhongTaoTian/WNXHuntForCity
+//  项目讲解博客:http://www.jianshu.com/p/8b0d694d1c69
 //  Created by MacBook on 15/7/2.
 //  Copyright (c) 2015年 维尼的小熊. All rights reserved.
-//
+
+//  ViewController的基类,封装了返回按钮,选择View,tableView
 
 #import "WNXShowViewController.h"
 #import "WNXRmndCell.h"
@@ -14,8 +15,12 @@
 #import "WNXRefresgHeader.h"
 #import "WNXRenderBlurView.h"
 #import "UIImage+Size.h"
+#import "WNXHomeCellModel.h"
 
 @interface WNXShowViewController ()<UITableViewDataSource, UITableViewDelegate, WNXConditionViewDelegate, WNXRenderBlurViewDelegate>
+
+/** 数据源 */
+@property (nonatomic, strong) NSMutableArray *datas;
 
 @end
 
@@ -29,6 +34,19 @@
     
     //设置上拉刷新
     [self setHeadRefresh];
+}
+
+- (NSMutableArray *)datas
+{
+    if (_datas == nil) {
+        _datas = [NSMutableArray array];
+        NSArray *arr = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"CellDatas" ofType:@"plist"]];
+        for (NSDictionary *dict in arr) {
+            WNXHomeCellModel *model = [WNXHomeCellModel cellModelWithDict:dict];
+            [_datas addObject:model];
+        }
+    }
+    return _datas;
 }
 
 - (void)setHeadRefresh
@@ -106,12 +124,13 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 6;
+    return self.datas.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    WNXRmndCell *cell = [WNXRmndCell cellWithTableView:self.tableView];
+    WNXHomeCellModel *model = self.datas[indexPath.row];
+    WNXRmndCell *cell = [WNXRmndCell cellWithTableView:self.tableView model:model];
     return cell;
 }
 
