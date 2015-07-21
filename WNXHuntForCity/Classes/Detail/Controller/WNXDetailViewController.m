@@ -38,7 +38,7 @@ static const CGFloat ScrollHeadViewHeight = 200;
 //选择View的高度
 static const CGFloat SelectViewHeight = 45;
 
-@interface WNXDetailViewController () <UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate, WNXSelectViewDelegate, WNXDetailFootViewDelegate, MAMapViewDelegate>
+@interface WNXDetailViewController () <UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate, WNXSelectViewDelegate, WNXDetailFootViewDelegate, MAMapViewDelegate, UIActionSheetDelegate>
 
 /** 地图view */
 @property (nonatomic, strong)  MAMapView *mapView;
@@ -86,6 +86,9 @@ static const CGFloat SelectViewHeight = 45;
 @property (nonatomic, strong) WNXDetailModel             *details;
 /** 信息tableview的数据 */
 @property (nonatomic, strong) NSMutableArray *infoDatas;
+
+/** 电话提示 */
+@property (nonatomic, strong) UIActionSheet *actionSheet;
 
 @end
 
@@ -243,7 +246,7 @@ static const CGFloat SelectViewHeight = 45;
     [self.mapView setCenterCoordinate:CLLocationCoordinate2DMake(39.906598, 116.400673) animated:YES];
     self.mapView.delegate = self;
     self.mapView.zoomLevel = 14;
-
+    
     //添加自定义图片
     MAPointAnnotation *pointAnnotation = [[MAPointAnnotation alloc] init];
     pointAnnotation.coordinate = CLLocationCoordinate2DMake(39.906598, 116.400673);
@@ -457,7 +460,7 @@ static const CGFloat SelectViewHeight = 45;
     } else {
         //信息tableVIew
         WNXInfoModel *model = self.infoDatas[indexPath.row];
-
+        
         return model.cellHeight;
     }
 }
@@ -486,7 +489,7 @@ static const CGFloat SelectViewHeight = 45;
             return [WNXRmdPicCell cellWithTabelView:tableView rmdPicModel:rmdCellModel];
         }
     }
-
+    
     WNXInfoCell *cell = [WNXInfoCell infoCellWithTableView:tableView];
     cell.model = self.infoDatas[indexPath.row];
     if (self.infoDatas.count - 1 == indexPath.row) {
@@ -503,9 +506,12 @@ static const CGFloat SelectViewHeight = 45;
         //地图
         WNXMapViewController *mapVC = [[WNXMapViewController alloc] init];
         [self.navigationController pushViewController:mapVC animated:YES];
-
+        
     } else if (indexPath.row == 1) {
+        WNXInfoModel *model = self.infoDatas[indexPath.row];
         //打电话
+        self.actionSheet = [[UIActionSheet alloc] initWithTitle:@"选择要播的电话" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:model.title otherButtonTitles:model.subTitle, nil];
+        [self.actionSheet showInView:self.view];
     }
 }
 
@@ -589,6 +595,21 @@ static const CGFloat SelectViewHeight = 45;
 {
     WNXUnLoginView *view = [WNXUnLoginView unLoginView];
     [view showUnLoginViewToView:self.view];
+}
+
+#pragma mark UIActionSheetDelegate
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    //不是取消按钮
+    if (buttonIndex != actionSheet.numberOfButtons - 1) {
+        UIApplication *app = [UIApplication sharedApplication];
+        //这里只有写了两种情况,实际是应该遍历服务器返回的数据,然后判断和buttonIndex
+        WNXInfoModel *model = self.infoDatas[1];
+        NSString *phoneNum = buttonIndex == 0 ? model.title : model.subTitle;
+        [app openURL:[NSURL URLWithString:[NSString stringWithFormat:@"tel://%@", phoneNum]]];
+    }
+    
+    actionSheet = nil;
 }
 
 - (void)dealloc
