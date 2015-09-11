@@ -27,7 +27,6 @@
 {    
     //取出cell，如果复用队列为空，系统自动创建WNXFoundCollectionViewCell
     WNXFoundCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"iconCell" forIndexPath:indexPath];
-
     return cell;
 }
 

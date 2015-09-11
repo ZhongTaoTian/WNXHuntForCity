@@ -117,7 +117,7 @@
         {
             NSString *path = WNXCachesPath;
             NSFileManager *fileManager=[NSFileManager defaultManager];
-                        float folderSize;
+            float folderSize;
             if ([fileManager fileExistsAtPath:path]) {
                 //拿到算有文件的数组
                 NSArray *childerFiles = [fileManager subpathsAtPath:path];
@@ -189,7 +189,6 @@
     if([fileManager fileExistsAtPath:path]){
         
         long long size=[fileManager attributesOfItemAtPath:path error:nil].fileSize;
-        
         return size/1024.0/1024.0;
     }
     return 0;

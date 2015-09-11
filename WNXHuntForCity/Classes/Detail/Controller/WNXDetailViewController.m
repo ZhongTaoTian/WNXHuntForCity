@@ -347,7 +347,7 @@ static const CGFloat SelectViewHeight = 45;
         CGFloat lackY = initY + startF;
         //自定义导航条高度
         CGFloat naviH = 64;
-        
+
         //渐隐alpha值
         CGFloat alphaScaleHide = 1 - (offsetY + initY- lackY) / (initY- naviH - SelectViewHeight - lackY);
         //渐现alph值

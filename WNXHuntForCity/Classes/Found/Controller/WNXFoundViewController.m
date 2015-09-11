@@ -65,13 +65,14 @@
     
     CGFloat itemW = 100.0;
     CGFloat itemH = 135;
+    // cell的大小
     layout.itemSize = CGSizeMake(itemW, itemH);
     
     //最小左右间距
     layout.minimumInteritemSpacing = 0;
     //最小上下间距
     layout.minimumLineSpacing = 20;
-    //每个cell的大小
+    //每个headView的大小
     layout.headerReferenceSize = CGSizeMake(self.view.bounds.size.width, 50);
     //内边距
     CGFloat marginLR = (WNXAppWidth - 3 * itemW) / 4;
@@ -133,6 +134,15 @@
     cell.delegate = self;
     cell.foundModel = foundModel;
     return cell;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
+    if (section == 0) {
+        return  CGSizeMake(375, 10);
+    } else {
+        return CGSizeMake(375, 100);
+    }
+    
 }
 
 #pragma mark - WNXFoundCollectionViewCellDelegate

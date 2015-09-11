@@ -36,7 +36,8 @@
         cell = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([WNXRmndCell class]) owner:nil options:nil] lastObject];
     }
     
-    [cell.backImageView sd_setImageWithURL:[NSURL URLWithString:model.imageURL] placeholderImage:[UIImage imageNamed:@"EXP_likeList_backImage6"]];
+    [cell.backImageView sd_setImageWithURL:[NSURL URLWithString:model.imageURL] placeholderImage:[UIImage imageNamed:@"ContentViewNoImages"]];
+
     cell.nameLabel.text = model.section_title;
     cell.adressLabel.text = model.poi_name;
     cell.praiseLabel.text = model.fav_count;
