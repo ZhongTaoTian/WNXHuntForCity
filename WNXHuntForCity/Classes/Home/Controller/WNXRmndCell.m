@@ -27,7 +27,6 @@
     self.selectionStyle = UITableViewCellSelectionStyleNone;
 }
 
-
 + (instancetype)cellWithTableView:(UITableView *)tableView model:(WNXHomeCellModel *)model
 {
     static NSString *ID = @"rmndCell";
