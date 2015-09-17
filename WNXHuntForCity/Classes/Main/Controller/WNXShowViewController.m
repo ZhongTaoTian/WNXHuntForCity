@@ -96,7 +96,6 @@
     self.tableView.dataSource = self;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:self.tableView];
-    
     //添加顶部条件选择view
     self.conditionView = [[WNXConditionView alloc] init];
     
